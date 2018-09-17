@@ -27,6 +27,8 @@ int main()
 			int n=i;
 			while(1)
 			{	
+				if(n==1)
+					break;
 				if(n%2==0)
 				{
 					n=n/2;
@@ -39,8 +41,7 @@ int main()
 					cycle++;
 				}
 
-				if(n==1)
-					break;
+				
 			}
 
 			if(big<cycle)
