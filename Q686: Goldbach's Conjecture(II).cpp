@@ -1,3 +1,8 @@
+/*程式競賽week1
+想法:
+1.建質數表
+2.for迴圈時只需要使用n/2就可以了 */
+
 #include<iostream>
 #include<cstdio>
 #include<cstring>
