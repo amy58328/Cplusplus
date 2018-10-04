@@ -1,3 +1,9 @@
+/*程式競賽week2 第一題
+想法:
+分母%分子==0
+分母/=分子
+看33和34行*/
+
 #include<iostream>
 #include<string>
 #include<cstdio>
