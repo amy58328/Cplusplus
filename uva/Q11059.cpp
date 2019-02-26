@@ -1,3 +1,5 @@
+//列舉法就可以了
+
 #include<iostream>
 #include<cstdio>
 #include<cstring>
