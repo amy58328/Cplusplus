@@ -22,10 +22,6 @@ int main()
 
 		memset(b,0,sizeof(b));
 
-
-
-
-
 		for(int i=0;i<size;i++)
 		{
 			cin >> a[i];
@@ -63,9 +59,6 @@ int main()
 				else
 					cout <<"Not jolly"<<endl;
 			}
-			
-
-
 		}
 	}
 

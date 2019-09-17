@@ -1,22 +1,50 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 
-using namespace std;
+using namespace std ;
+
 
 int main(int argc, char const *argv[])
 {
 	#ifdef DEBUG
 	freopen("input.in","r",stdin);
 	freopen("output.out","w",stdout);
-	#endif 
+	#endif
 
-	int s,a,b,c;
-	while ( cin >> s >> a >> b >> c ) {
-		if ( s+a+b+c == 0 ) break;
-		int cost = 120;
-		cost += (40+s-a)%40;
-		cost += (40+b-a)%40;
-		cost += (40+b-c)%40;
-		cout << cost*9 << endl;
+	int n;
+	int t=0;
+	while(cin >>n)
+	{
+		t++;
+		int num[n];
+		for(int i=0 ; i<n ;i++)
+			cin >> num[i];
+
+		long long ans = -10000;
+
+		for(int i=0 ; i<n ; i++)
+		{
+			long long sum = num[i];
+			if(sum >ans )
+				ans = sum;
+			for(int j=i+1 ; j<n ; j++)
+			{
+				sum = sum*num[j];
+
+				if(sum > ans)
+					ans = sum;
+			}
+		}
+
+
+		if(ans < 0)
+		{
+			ans = 0;
+			printf("Case #%d: The maximum product is %lld.\n\n",t,ans );
+		}
+		else
+			printf("Case #%d: The maximum product is %lld.\n\n", t,ans);
+
 	}
-	return 0;
+		
 }
+

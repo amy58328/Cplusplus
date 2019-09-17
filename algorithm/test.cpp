@@ -6,32 +6,14 @@
 #define loop(i,n) for(int i=0 ;i<n;i++)
 
 using namespace std;
-
-int main()
+int main(int argc, char const *argv[])
 {
-	int so[10],al[10];
-
-	loop(i,10)
+	struct  data
 	{
-		cin >> al[i];
-	}
+		char name[10];
+		int max;
+	};
 
-	loop(i,10)//algorithm
-	{
-		int min_site = i;
-		for(int j=i+1 ; j<10 ; j++)
-			if(al[j] < al[min_site])
-				min_site = j;
-
-		swap(al[i] , al[min_site]);
-
-	}
-	
-
-
-	// printf
-
-	loop(i,10)
-		cout << al[i] << " " ;
-
+	cout << sizeof(data);
+	return 0;
 }
